@@ -7,9 +7,6 @@ const pageDescription = ref("This is the about page description.");
 
 onMounted(() => {
   console.log("Page Name:", pageTitle.value);
-
-  // Sử dụng setTimeout để chuyển hướng sau 15 giây
-  // Hiển thị dữ liệu sau khi chờ 15 giây
   setTimeout(() => {
     showData.value = true;
   }, 15000);
@@ -17,7 +14,7 @@ onMounted(() => {
 
 const router = useRouter();
 const redirectToHome = () => {
-  router.push("/"); // Chuyển hướng về trang Home khi nút được nhấn
+  router.push("/");
   setTimeout(() => {
     console.log("exit page");
   }, 2000);
